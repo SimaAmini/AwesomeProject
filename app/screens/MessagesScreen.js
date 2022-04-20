@@ -9,14 +9,14 @@ import Screen from '../components/Screen'
 const initialMessages = [
     {
         id: 1,
-        title: 'title 1',
-        description: 'dksldk',
+        title: 'Sima Amini',
+        description: 'Hey!',
         image: require('../assets/mosh.jpg'),
     },
     {
         id: 2,
-        title: 'title 2',
-        description: 'dksldk 2',
+        title: 'Sima Amini',
+        description: 'What are you doing?',
         image: require('../assets/mosh.jpg'),
     },
 ]
