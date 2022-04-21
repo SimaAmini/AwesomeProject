@@ -1,11 +1,11 @@
 import React from 'react'
 import { Image, StyleSheet, View, TouchableHighlight } from 'react-native'
-import colors from '../config/colors'
-import AppText from './AppText'
+import colors from '../../config/colors'
+import Text from '../Text'
 import Swipeable from 'react-native-gesture-handler/Swipeable'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
-function ListingItem({
+function ListItem({
     image,
     title,
     subtitle,
@@ -24,16 +24,13 @@ function ListingItem({
                         {IconComponent}
                         {image && <Image style={styles.image} source={image} />}
                         <View style={styles.detailContainer}>
-                            <AppText style={styles.title} numberOfLines={1}>
+                            <Text style={styles.title} numberOfLines={1}>
                                 {title}
-                            </AppText>
+                            </Text>
                             {subtitle && (
-                                <AppText
-                                    style={styles.subtitle}
-                                    numberOfLines={2}
-                                >
+                                <Text style={styles.subtitle} numberOfLines={2}>
                                     {subtitle}
-                                </AppText>
+                                </Text>
                             )}
                         </View>
                         <MaterialCommunityIcons
@@ -74,4 +71,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default ListingItem
+export default ListItem

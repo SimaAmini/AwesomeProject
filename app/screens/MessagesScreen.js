@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { FlatList, View } from 'react-native'
 
-import ListingItem from '../components/ListingItem'
-import ListItemDeleteAction from '../components/ListItemDeleteAction'
-import ListItemSeparator from '../components/ListItemSeparator'
+import {
+    ListItem,
+    ListItemDeleteAction,
+    ListItemSeparator,
+} from '../components/list'
+
 import Screen from '../components/Screen'
 
 const initialMessages = [
@@ -46,7 +49,7 @@ function MessagesScreen(props) {
                 data={messages}
                 keyExtractor={(message) => message.id.toString()}
                 renderItem={({ item }) => (
-                    <ListingItem
+                    <ListItem
                         title={item.title}
                         subtitle={item.description}
                         image={item.image}
