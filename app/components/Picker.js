@@ -57,7 +57,7 @@ function AppPicker({
                     <Button
                         title="Close"
                         onPress={() => setModalVisible(false)}
-                    ></Button>
+                    />
                     <FlatList
                         data={items}
                         keyExtractor={(item) => item.value.toString()}
