@@ -3,26 +3,26 @@ import { Image, StyleSheet } from 'react-native'
 import * as Yup from 'yup'
 
 import Screen from '../components/Screen'
-import { AppForm, AppFormField, SubmitButton } from '../components/forms'
+import { Form, FormField, SubmitButton } from '../components/forms'
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label('Email'),
     password: Yup.string().required().min(4).label('Password'),
 })
 
-function LoginScreen() {
+const LoginScreen = () => {
     return (
         <Screen style={styles.screen}>
             <Image
                 style={styles.logo}
                 source={require('../assets/logo-red.png')}
             />
-            <AppForm
+            <Form
                 initialValues={{ email: '', password: '' }}
                 onSubmit={(values) => console.log(values)}
                 validationSchema={validationSchema}
             >
-                <AppFormField
+                <FormField
                     name="email"
                     autoCapitalize="none"
                     autoCorrect={false}
@@ -32,7 +32,7 @@ function LoginScreen() {
                     textContentType="emailAddress"
                 />
 
-                <AppFormField
+                <FormField
                     name="password"
                     autoCapitalize="none"
                     autoCorrect={false}
@@ -43,7 +43,7 @@ function LoginScreen() {
                 />
 
                 <SubmitButton title="Login" />
-            </AppForm>
+            </Form>
         </Screen>
     )
 }

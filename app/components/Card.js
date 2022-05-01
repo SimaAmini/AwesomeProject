@@ -1,17 +1,19 @@
 import React from 'react'
-import { Image, View, StyleSheet } from 'react-native'
+import { Image, View, StyleSheet, TouchableWithoutFeedback } from 'react-native'
 import colors from '../config/colors'
 import Text from './Text'
 
-function Card({ title, subtitle, image }) {
+function Card({ title, subtitle, image, onPress }) {
     return (
-        <View style={styles.card}>
-            <Image style={styles.image} source={image} />
-            <View style={styles.detailsContainer}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.subtitle}>{subtitle}</Text>
+        <TouchableWithoutFeedback onPress={onPress}>
+            <View style={styles.card}>
+                <Image style={styles.image} source={image} />
+                <View style={styles.detailsContainer}>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.subtitle}>{subtitle}</Text>
+                </View>
             </View>
-        </View>
+        </TouchableWithoutFeedback>
     )
 }
 const styles = StyleSheet.create({

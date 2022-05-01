@@ -5,6 +5,7 @@ import Text from '../Text'
 import Swipeable from 'react-native-gesture-handler/Swipeable'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
+
 function ListItem({
     image,
     title,
