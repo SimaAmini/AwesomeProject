@@ -12,7 +12,6 @@ export default useLocation = () => {
             const {
                 coords: { latitude, longitude },
             } = await Location.getLastKnownPositionAsync()
-            console.log({ latitude, longitude })
             setLocation({ latitude, longitude })
         } catch (error) {
             console.log(error)
