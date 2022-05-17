@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import colors from '../config/colors'
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
@@ -28,9 +28,5 @@ function Icon({
         </View>
     )
 }
-
-// const styles = StyleSheet.create({
-//     container: {},
-// })
 
 export default Icon
